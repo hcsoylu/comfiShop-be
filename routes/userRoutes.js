@@ -18,10 +18,10 @@ router
   .route("/")
   .get(authenticateUser, authorizePermissions("admin", "owner"), getAllUsers);
 
-router.route("/showMe").get(showCurrentUser);
+router.route("/showMe").get(authenticateUser, showCurrentUser);
 
 router.route("/updateUser").patch(updateUser);
-router.route("/updateUserPassword").patch(updateUserPassword);
+router.route("/updateUserPassword").patch(authenticateUser, updateUserPassword);
 
 router.route("/:id").get(getSingleUser);
 
