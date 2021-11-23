@@ -23,7 +23,7 @@ const agg = [
 ];
 
 MongoClient.connect(
-  "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.uchor.mongodb.net/nodeshop?authSource=admin&replicaSet=atlas-y7bjz8-shard-0&readPreference=primary&appname=MongoDB+Compass&ssl=true",
+ url,
   { useNewUrlParser: true, useUnifiedTopology: true },
   function (connectErr, client) {
     assert.equal(null, connectErr);
